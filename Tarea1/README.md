@@ -124,7 +124,7 @@ Se identificaron las cinco marcas con mayor Brand Equity (USD Billones) en el a�
 
 La siguiente gráfica muestra las marcas dominantes por región en 2021 utilizando colores diferenciados por región.
 
-![Top Marcas por Región en 2021](/imagenes/grafica.png)
+![Top Marcas por Región en 2021](imagenes/grafica.png)
 
 ## Interpretación de Resultados
 
