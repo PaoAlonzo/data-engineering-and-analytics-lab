@@ -1,0 +1,52 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+dist/
+build/
+
+# Entorno virtual
+.venv/
+venv/
+env/
+ENV/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+etl_*.log
+
+# Base de datos
+*.db
+*.sqlite
+*.mdf
+*.ldf
+
+# Configuración sensible (si contiene credenciales)
+# config.py
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+
+# Datos temporales
+temp/
+tmp/
+*.tmp
+
+# Backups
+*.bak
+*.backup
