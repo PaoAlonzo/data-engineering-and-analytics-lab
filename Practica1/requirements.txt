@@ -1,0 +1,19 @@
+
+# Dependencias Python para Práctica 1 - ETL Vuelos
+
+# Procesamiento de datos  
+pandas>=2.0.0
+
+# Conexión con SQL Server
+pyodbc>=5.0.0
+sqlalchemy>=2.0.0
+
+# Manejo de fechas
+python-dateutil>=2.8.0
+
+# Utilidades
+numpy>=1.24.0
+
+# Visualización 
+matplotlib>=3.7.0
+seaborn>=0.12.0
