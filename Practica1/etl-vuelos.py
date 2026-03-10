@@ -38,17 +38,17 @@ def extract_data(file_path):
         logger.info(f"Leyendo archivo: {file_path}")
         df = pd.read_csv(file_path, encoding='utf-8')
         
-        logger.info(f"✓ Registros leídos: {len(df):,}")
-        logger.info(f"✓ Columnas encontradas: {len(df.columns)}")
+        logger.info(f" Registros leídos: {len(df):,}")
+        logger.info(f" Columnas encontradas: {len(df.columns)}")
         logger.info(f"  Columnas: {', '.join(df.columns[:5])}...")
         
         return df
         
     except FileNotFoundError:
-        logger.error(f"✗ Error: No se encontró el archivo {file_path}")
+        logger.error(f" Error: No se encontró el archivo {file_path}")
         sys.exit(1)
     except Exception as e:
-        logger.error(f"✗ Error al leer el archivo: {e}")
+        logger.error(f" Error al leer el archivo: {e}")
         sys.exit(1)
 
 
@@ -181,9 +181,9 @@ def transform_data(df):
     duplicates_removed = before_dedup - len(df_clean)
     
     if duplicates_removed > 0:
-        logger.info(f"   ✓ Duplicados eliminados: {duplicates_removed}")
+        logger.info(f"    Duplicados eliminados: {duplicates_removed}")
     else:
-        logger.info(f"   ✓ No se encontraron duplicados")
+        logger.info(f"    No se encontraron duplicados")
     
     # Resumen de transformación
     logger.info("\n" + "-" * 70)
@@ -205,7 +205,7 @@ def get_db_connection():
         conn = pyodbc.connect(get_connection_string())
         return conn
     except Exception as e:
-        logger.error(f"✗ Error al conectar a la base de datos: {e}")
+        logger.error(f" Error al conectar a la base de datos: {e}")
         sys.exit(1)
 
 
@@ -237,8 +237,8 @@ def load_dim_aerolinea(df, conn):
     cursor.execute("SELECT COUNT(*) FROM dim_aerolinea")
     total = cursor.fetchone()[0]
     
-    logger.info(f"   ✓ Aerolíneas únicas en dataset: {len(airlines)}")
-    logger.info(f"   ✓ Total en dim_aerolinea: {total}")
+    logger.info(f"    Aerolíneas únicas en dataset: {len(airlines)}")
+    logger.info(f"    Total en dim_aerolinea: {total}")
     
     cursor.close()
 
@@ -384,31 +384,31 @@ def load_fact_vuelo(df, conn):
             
             # airline_id
             cursor.execute("SELECT airline_id FROM dim_aerolinea WHERE airline_code = ?", 
-                          row['airline_code'])
+                        row['airline_code'])
             airline_result = cursor.fetchone()
             airline_id = airline_result[0] if airline_result else None
             
             # origin_airport_id
             cursor.execute("SELECT airport_id FROM dim_aeropuerto WHERE airport_code = ?", 
-                          row['origin_airport'])
+                        row['origin_airport'])
             origin_result = cursor.fetchone()
             origin_airport_id = origin_result[0] if origin_result else None
             
             # destination_airport_id
             cursor.execute("SELECT airport_id FROM dim_aeropuerto WHERE airport_code = ?", 
-                          row['destination_airport'])
+                        row['destination_airport'])
             dest_result = cursor.fetchone()
             destination_airport_id = dest_result[0] if dest_result else None
             
             # passenger_key
             cursor.execute("SELECT passenger_key FROM dim_pasajero WHERE passenger_id = ?", 
-                          row['passenger_id'])
+                        row['passenger_id'])
             passenger_result = cursor.fetchone()
             passenger_key = passenger_result[0] if passenger_result else None
             
             # aircraft_id
             cursor.execute("SELECT aircraft_id FROM dim_avion WHERE aircraft_type = ? AND cabin_class = ?", 
-                          row['aircraft_type'], row['cabin_class'])
+                        row['aircraft_type'], row['cabin_class'])
             aircraft_result = cursor.fetchone()
             aircraft_id = aircraft_result[0] if aircraft_result else None
             
@@ -417,10 +417,26 @@ def load_fact_vuelo(df, conn):
                 errors += 1
                 continue
             
-            # date_ids
+            # date_ids - Validar que existan en dim_fecha
             departure_date_id = get_date_id(row['departure_datetime'])
             arrival_date_id = get_date_id(row['arrival_datetime'])
             booking_date_id = get_date_id(row['booking_datetime'])
+            
+            # Verificar que los date_ids existan en dim_fecha
+            if departure_date_id:
+                cursor.execute("SELECT date_id FROM dim_fecha WHERE date_id = ?", departure_date_id)
+                if not cursor.fetchone():
+                    departure_date_id = None
+                    
+            if arrival_date_id:
+                cursor.execute("SELECT date_id FROM dim_fecha WHERE date_id = ?", arrival_date_id)
+                if not cursor.fetchone():
+                    arrival_date_id = None
+                    
+            if booking_date_id:
+                cursor.execute("SELECT date_id FROM dim_fecha WHERE date_id = ?", booking_date_id)
+                if not cursor.fetchone():
+                    booking_date_id = None
             
             # Insertar en fact_vuelo
             cursor.execute("""
@@ -505,7 +521,7 @@ def main():
         # Conectar a la base de datos
         logger.info("\nConectando a SQL Server...")
         conn = get_db_connection()
-        logger.info("✓ Conexión establecida")
+        logger.info(" Conexión establecida")
         
         # Cargar dimensiones
         logger.info("\nCARGANDO DIMENSIONES:")
@@ -522,7 +538,7 @@ def main():
         
         # Cerrar conexión
         conn.close()
-        logger.info("\n✓ Conexión cerrada")
+        logger.info("\n Conexión cerrada")
         
         # RESUMEN FINAL
         end_time = datetime.now()
@@ -539,7 +555,7 @@ def main():
         return 0
         
     except Exception as e:
-        logger.error(f"\n✗ ERROR CRÍTICO: {e}")
+        logger.error(f"\n ERROR CRÍTICO: {e}")
         logger.error("El proceso ETL ha fallado.")
         import traceback
         logger.error(traceback.format_exc())
