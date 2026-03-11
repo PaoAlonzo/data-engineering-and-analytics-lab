@@ -1,0 +1,319 @@
+Changed database context to 'DW_Vuelos'.
+Tabla          Total_Registros
+-------------- ---------------
+dim_aerolinea               12
+dim_aeropuerto              15
+dim_avion                   48
+dim_fecha                 4018
+dim_pasajero             10000
+fact_vuelo               10000
+
+(6 rows affected)
+Verificacion                  Total      
+----------------------------- -----------
+Vuelos sin aerolínea                   0
+Vuelos sin aeropuerto origen            0
+Vuelos sin aeropuerto destino           0
+Vuelos sin pasajero                     0
+
+(4 rows affected)
+Total_Vuelos Numeros_Vuelo_Unicos Registros_Unicos
+------------ -------------------- ----------------
+       10000                 9594            10000
+
+(1 rows affected)
+Codigo     Aerolinea                                                                                            Total_Vuelos Porcentaje
+---------- ---------------------------------------------------------------------------------------------------- ------------ ----------
+CM         Copa Airlines                                                                                                 888       8.88
+WN         Southwest                                                                                                     868       8.68
+IB         Iberia                                                                                                        867       8.67
+B6         Jetblue                                                                                                       853       8.53
+FR         Ryanair                                                                                                       850       8.50
+AV         Avianca                                                                                                       835       8.35
+BA         British Airways                                                                                               829       8.29
+AA         American Airlines                                                                                             824       8.24
+DL         Delta                                                                                                         814       8.14
+LA         Latam                                                                                                         803       8.03
+
+(10 rows affected)
+Origen     Destino    Total_Vuelos Duracion_Promedio_Min Precio_Promedio_USD                     
+---------- ---------- ------------ --------------------- ----------------------------------------
+MIA        HAV                  76                   229                                73.973289
+HAV        CUN                  66                   216                                66.594242
+SAL        LAX                  64                   252                                77.913906
+HAV        GUA                  63                   232                                81.549523
+CUN        BOG                  62                   227                                79.867580
+SJO        BCN                  62                   228                                77.764838
+PTY        SAP                  61                   225                                71.673278
+GUA        BOG                  60                   227                                64.451500
+PTY        GUA                  60                   221                                69.360333
+SAL        CUN                  60                   221                                85.247333
+
+(10 rows affected)
+Destino    Total_Llegadas Aerolineas_Diferentes
+---------- -------------- ---------------------
+SAP                   701                    12
+CUN                   699                    12
+BOG                   696                    12
+BCN                   696                    12
+HAV                   693                    12
+MAD                   682                    12
+LAX                   671                    12
+MEX                   670                    12
+SJO                   667                    12
+GUA                   655                    12
+
+(10 rows affected)
+Origen     Total_Salidas Aerolineas_Diferentes
+---------- ------------- ---------------------
+HAV                  740                    12
+MIA                  708                    12
+SAL                  707                    12
+SJO                  685                    12
+JFK                  681                    12
+PTY                  666                    12
+MAD                  660                    12
+CUN                  658                    12
+BOG                  656                    12
+GUA                  655                    12
+
+(10 rows affected)
+Estado               Total_Vuelos Porcentaje
+-------------------- ------------ ----------
+ON_TIME                      7278      72.78
+DELAYED                      1970      19.70
+CANCELLED                     560       5.60
+DIVERTED                      192       1.92
+
+(4 rows affected)
+Estado               Total_Vuelos Demora_Promedio_Min      Demora_Minima_Min Demora_Maxima_Min Demora_Total_Min
+-------------------- ------------ ------------------------ ----------------- ----------------- ----------------
+DELAYED                      1970       124.93147208121827                10               240           246115
+
+(1 rows affected)
+Codigo     Aerolinea                                                                                            Vuelos_Demorados Demora_Promedio_Min      Demora_Maxima_Min
+---------- ---------------------------------------------------------------------------------------------------- ---------------- ------------------------ -----------------
+IB         Iberia                                                                                                            185       120.53513513513514               239
+WN         Southwest                                                                                                         184       125.81521739130434               240
+FR         Ryanair                                                                                                           172       137.20348837209303               239
+CM         Copa Airlines                                                                                                     167       124.67664670658682               240
+AA         American Airlines                                                                                                 166       114.40361445783132               240
+AV         Avianca                                                                                                           162       122.49382716049382               235
+UA         United                                                                                                            160                  125.625               240
+DL         Delta                                                                                                             160       116.09999999999999               239
+B6         Jetblue                                                                                                           155       123.13548387096775               238
+LA         Latam                                                                                                             155       130.31612903225806               239
+
+(10 rows affected)
+Codigo     Aerolinea                                                                                            Vuelos_Cancelados Porcentaje_Del_Total
+---------- ---------------------------------------------------------------------------------------------------- ----------------- --------------------
+AV         Avianca                                                                                                             60                10.71
+CM         Copa Airlines                                                                                                       58                10.36
+BA         British Airways                                                                                                     53                 9.46
+UA         United                                                                                                              48                 8.57
+AA         American Airlines                                                                                                   48                 8.57
+WN         Southwest                                                                                                           47                 8.39
+FR         Ryanair                                                                                                             46                 8.21
+LA         Latam                                                                                                               46                 8.21
+AM         Aeromexico                                                                                                          43                 7.68
+IB         Iberia                                                                                                              42                 7.50
+DL         Delta                                                                                                               35                 6.25
+B6         Jetblue                                                                                                             34                 6.07
+
+(12 rows affected)
+Genero          Total_Vuelos Porcentaje
+--------------- ------------ ----------
+Masculino               4912      49.12
+Femenino                4698      46.98
+Otro                     346       3.46
+No especificado           44        .44
+
+(4 rows affected)
+Rango_Edad           Total_Vuelos Porcentaje Precio_Promedio_USD                     
+-------------------- ------------ ---------- ----------------------------------------
+36-50 (Adulto)               3358      33.58                                77.799300
+26-35 (Adulto Joven)         2879      28.79                                77.556932
+18-25 (Joven)                1620      16.20                                76.613537
+0-17 (Menor)                 1068      10.68                                75.119681
+51+ (Adulto Mayor)            963       9.63                                75.213665
+No especificado               112       1.12                                77.819107
+
+(6 rows affected)
+Nacionalidad Total_Vuelos Porcentaje Precio_Promedio_USD                     
+------------ ------------ ---------- ----------------------------------------
+PA                    923       9.23                                76.566652
+US                    909       9.09                                76.843630
+MX                    908       9.08                                76.137544
+SV                    900       9.00                                74.006422
+ES                    899       8.99                                76.815617
+GT                    891       8.91                                78.145780
+PE                    886       8.86                                77.977110
+CU                    882       8.82                                79.930929
+CR                    882       8.82                                76.747154
+HN                    869       8.69                                77.451634
+
+(10 rows affected)
+Total_Ventas Ingreso_Total_USD                        Precio_Promedio_USD                      Precio_Minimo_USD Precio_Maximo_USD
+------------ ---------------------------------------- ---------------------------------------- ----------------- -----------------
+       10000                                770024.71                                77.002471              1.71            712.14
+
+(1 rows affected)
+Canal_Venta                    Total_Ventas Ingreso_Total_USD                        Precio_Promedio_USD                      Porcentaje_Ventas
+------------------------------ ------------ ---------------------------------------- ---------------------------------------- -----------------
+AEROPUERTO                             2024                                153369.90                                75.775642             20.24
+WEB                                    1995                                154924.20                                77.656240             19.95
+AGENCIA                                1958                                147886.49                                75.529361             19.58
+CALL_CENTER                            1947                                152055.24                                78.097195             19.47
+APP                                    1932                                150837.60                                78.073291             19.32
+
+(5 rows affected)
+Metodo_Pago                    Total_Transacciones Ingreso_Total_USD                        Precio_Promedio_USD                      Porcentaje
+------------------------------ ------------------- ---------------------------------------- ---------------------------------------- ----------
+PAYPAL                                        2067                                157990.59                                76.434731      20.67
+TARJETA                                       2042                                161957.84                                79.313339      20.42
+TRANSFERENCIA                                 1984                                151413.06                                76.317066      19.84
+PUNTOS                                        1958                                148746.15                                75.968411      19.58
+EFECTIVO                                      1949                                149917.07                                76.919994      19.49
+
+(5 rows affected)
+Codigo     Aerolinea                                                                                            Total_Vuelos Ingreso_Total_USD                        Precio_Promedio_USD                     
+---------- ---------------------------------------------------------------------------------------------------- ------------ ---------------------------------------- ----------------------------------------
+CM         Copa Airlines                                                                                                 888                                 69528.66                                78.298040
+FR         Ryanair                                                                                                       850                                 68177.33                                80.208623
+B6         Jetblue                                                                                                       853                                 67886.40                                79.585463
+WN         Southwest                                                                                                     868                                 66926.08                                77.103778
+AV         Avianca                                                                                                       835                                 66029.48                                79.077221
+IB         Iberia                                                                                                        867                                 65700.43                                75.779042
+AA         American Airlines                                                                                             824                                 62565.21                                75.928652
+DL         Delta                                                                                                         814                                 62054.47                                76.233992
+LA         Latam                                                                                                         803                                 61611.29                                76.726388
+UA         United                                                                                                        797                                 60386.13                                75.766787
+
+(10 rows affected)
+Clase_Cabina                   Total_Vuelos Porcentaje Precio_Promedio_USD                     
+------------------------------ ------------ ---------- ----------------------------------------
+ECONOMY                                7866      78.66                                63.535054
+PREMIUM_ECONOMY                         974       9.74                                89.386755
+BUSINESS                                956       9.56                               143.647594
+FIRST                                   204       2.04                               224.843970
+
+(4 rows affected)
+Tipo_Aeronave        Total_Vuelos Porcentaje
+-------------------- ------------ ----------
+A319                          872       8.72
+B738                          871       8.71
+B757                          867       8.67
+A321                          853       8.53
+A320                          847       8.47
+B739                          844       8.44
+B787                          828       8.28
+B777                          821       8.21
+B737                          816       8.16
+E190                          806       8.06
+
+(10 rows affected)
+Anio        Total_Vuelos Ingreso_Total_USD                        Precio_Promedio_USD                     
+----------- ------------ ---------------------------------------- ----------------------------------------
+       2024         4927                                385334.71                                78.208790
+       2025         5073                                384690.00                                75.830869
+
+(2 rows affected)
+Anio        Mes         Nombre_Mes           Total_Vuelos Precio_Promedio_USD                     
+----------- ----------- -------------------- ------------ ----------------------------------------
+       2025           1 January                       421                                77.291543
+       2025           2 February                      402                                77.462338
+       2025           3 March                         397                                76.553954
+       2025           4 April                         449                                71.604075
+       2025           5 May                           423                                76.994491
+       2025           6 June                          459                                74.608671
+       2025           7 July                          448                                81.176562
+       2025           8 August                        404                                74.905841
+       2025           9 September                     391                                71.183222
+       2025          10 October                       411                                75.808369
+       2025          11 November                      430                                75.512209
+       2025          12 December                      438                                76.632442
+       2024           1 January                       423                                87.456406
+       2024           2 February                      380                                78.645289
+       2024           3 March                         416                                76.095168
+       2024           4 April                         420                                70.714476
+       2024           5 May                           402                                76.354651
+       2024           6 June                          370                                77.834135
+       2024           7 July                          404                                77.210148
+       2024           8 August                        428                                85.816752
+       2024           9 September                     391                                76.254450
+       2024          10 October                       464                                71.748146
+       2024          11 November                      389                                83.305141
+       2024          12 December                      440                                77.663113
+
+(24 rows affected)
+Dia_Semana           Total_Vuelos Precio_Promedio_USD                      Porcentaje
+-------------------- ------------ ---------------------------------------- ----------
+Sunday                       1435                                75.118710      14.35
+Monday                       1421                                74.237923      14.21
+Tuesday                      1394                                76.278629      13.94
+Wednesday                    1451                                76.697725      14.51
+Thursday                     1432                                79.817772      14.32
+Friday                       1458                                79.236817      14.58
+Saturday                     1409                                77.565741      14.09
+
+(7 rows affected)
+Total_Maletas Total_Vuelos Porcentaje
+------------- ------------ ----------
+            0         1493      14.93
+            1         5448      54.48
+            2         2589      25.89
+            3          470       4.70
+
+(4 rows affected)
+Clase_Cabina                   Promedio_Maletas_Total   Promedio_Maletas_Documentadas
+------------------------------ ------------------------ -----------------------------
+FIRST                                1.2745098039215685           0.37254901960784315
+BUSINESS                             1.2531380753138075            0.3807531380753138
+ECONOMY                              1.1983218916857361           0.35100432240020341
+PREMIUM_ECONOMY                      1.1827515400410678           0.33675564681724846
+
+(4 rows affected)
+ID_Pasajero                                        Genero    Edad        Nacionalidad Total_Vuelos Gasto_Total_USD                          Gasto_Promedio_USD                      
+-------------------------------------------------- --------- ----------- ------------ ------------ ---------------------------------------- ----------------------------------------
+354840d3-627d-4341-894a-e602897399b0               Femenino           14 PA                      1                                    68.34                                68.340000
+30292801-622a-4975-9967-871918433ed3               Masculino          19 GT                      1                                   108.55                               108.550000
+954148d3-7a07-4778-98cd-8a8a5fd2bee6               Femenino         NULL CU                      1                                   148.39                               148.390000
+8074a06e-4ba3-488b-92a8-fd984d511522               Femenino           56 PE                      1                                    74.44                                74.440000
+4d67f77b-4318-4a9d-bfd4-9b50c2d4ce76               Masculino          14 SV                      1                                    63.31                                63.310000
+3fb5c444-37ac-4e16-9495-9d3d17bd7aef               Femenino           32 HN                      1                                    80.39                                80.390000
+c32937cc-e27e-4500-8a4d-c2619ee9e406               Femenino           32 PE                      1                                   353.63                               353.630000
+f79082f7-5237-4e77-8cbe-395b8c108f0b               Masculino          52 ES                      1                                    55.00                                55.000000
+e77b8bc8-7a83-4491-b773-63519556fcab               Masculino          27 SV                      1                                     5.25                                 5.250000
+32e59c09-72d7-44a4-a8cc-1012e4fccb77               Masculino          35 NULL                    1                                   114.32                               114.320000
+
+(10 rows affected)
+Origen     Destino    Total_Vuelos Ingreso_Total_USD                        Precio_Promedio_USD                      Duracion_Promedio_Min
+---------- ---------- ------------ ---------------------------------------- ---------------------------------------- ---------------------
+MIA        HAV                  76                                  5621.97                                73.973289                   229
+HAV        PTY                  51                                  5405.44                               105.989019                   243
+MIA        GUA                  52                                  5253.85                               101.035576                   193
+MIA        SAP                  51                                  5181.44                               101.596862                   238
+HAV        BOG                  59                                  5144.49                                87.194745                   223
+HAV        GUA                  63                                  5137.62                                81.549523                   232
+SAL        CUN                  60                                  5114.84                                85.247333                   221
+BCN        MEX                  57                                  5079.74                                89.118245                   228
+SAL        LAX                  64                                  4986.49                                77.913906                   252
+CUN        BOG                  62                                  4951.79                                79.867580                   227
+
+(10 rows affected)
+Codigo     Aerolinea                                                                                            Total_Vuelos Vuelos_A_Tiempo Vuelos_Demorados Vuelos_Cancelados Porcentaje_Puntualidad
+---------- ---------------------------------------------------------------------------------------------------- ------------ --------------- ---------------- ----------------- ----------------------
+B6         Jetblue                                                                                                       853             646              155                34                  75.73
+DL         Delta                                                                                                         814             598              160                35                  73.46
+CM         Copa Airlines                                                                                                 888             652              167                58                  73.42
+LA         Latam                                                                                                         803             589              155                46                  73.35
+FR         Ryanair                                                                                                       850             622              172                46                  73.18
+AM         Aeromexico                                                                                                    772             562              151                43                  72.80
+BA         British Airways                                                                                               829             602              153                53                  72.62
+IB         Iberia                                                                                                        867             629              185                42                  72.55
+UA         United                                                                                                        797             573              160                48                  71.89
+AA         American Airlines                                                                                             824             592              166                48                  71.84
+AV         Avianca                                                                                                       835             596              162                60                  71.38
+WN         Southwest                                                                                                     868             617              184                47                  71.08
+
+(12 rows affected)

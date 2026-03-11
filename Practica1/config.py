@@ -4,7 +4,7 @@
 
 # Configuración del servidor SQL Server
 DB_CONFIG = {
-    'server': 'localhost',  
+    'server': 'localhost\\SQLEXPRESS',  
     'database': 'DW_Vuelos',
     'driver': 'ODBC Driver 17 for SQL Server',  # Cambiar según el driver instalado
     'trusted_connection': True  # True para autenticación de Windows

@@ -27,31 +27,86 @@ Implementación de un proceso ETL (Extracción, Transformación y Carga) complet
 
 ```
 Practica1/
+├── imagenes/
+│   └── modelo.png                 # Diagrama del modelo de datos
 ├── dataset_vuelos_crudo.csv      # Dataset original
 ├── create_database.sql            # Script de creación de BD
-├── etl-vuelos.py                  # Script ETL principal ✅
-├── consultas.sql                  # Consultas SQL ✅
+├── etl-vuelos.py                  # Script ETL principal
+├── consultas.sql                  # Consultas SQL
 ├── config.py                      # Configuración de conexión
-├── test_setup.py                  # Script de prueba
 ├── requirements.txt               # Dependencias Python
-├── GUIA_EJECUCION.md             # Guía detallada de ejecución
-├── INSTRUCCIONES_SETUP.md        # Guía de configuración
+├── resultados_consultas.txt       # Resultados de consultas SQL
+├── etl_vuelos.log                 # Log de ejecución del ETL
+├── validaciones.md                # Resumen de validación de consultas
 └── README.md                      # Este archivo
 ```
 
 ## Modelo de Datos
 
-### Dimensiones:
+### Diagrama del Modelo Multidimensional
 
-- **dim_aerolinea**: Información de aerolíneas
-- **dim_aeropuerto**: Catálogo de aeropuertos
-- **dim_pasajero**: Datos de pasajeros
-- **dim_fecha**: Dimensión temporal
-- **dim_avion**: Tipos de aeronave y clase de cabina
+El modelo implementado sigue el patrón Esquema Estrella, donde la tabla de hechos se encuentra en el centro rodeada por las tablas dimensionales.
 
-### Tabla de Hechos:
+![Diagrama del Modelo de Datos](imagenes/modelo.png)
 
-- **fact_vuelo**: Registro de cada vuelo con métricas y relaciones
+### Descripción del Modelo
+
+El diseño utiliza un modelo dimensional tipo estrella que facilita las consultas analíticas y el análisis de negocio. Este patrón es ampliamente utilizado en data warehouses por su simplicidad y rendimiento.
+
+#### Componentes del Modelo:
+
+**Tabla de Hechos Central:**
+
+- **fact_vuelo**: Contiene los registros transaccionales de cada vuelo con métricas cuantitativas (precio, duración, demora, equipaje) y claves foráneas hacia las dimensiones.
+
+**Tablas Dimensionales (Alrededor de la tabla de hechos):**
+
+1. **dim_aerolinea**: Información de las aerolíneas
+   - airline_id (PK)
+   - airline_code
+   - airline_name
+
+2. **dim_aeropuerto**: Catálogo de aeropuertos de origen y destino
+   - airport_id (PK)
+   - airport_code
+   - airport_name
+
+3. **dim_pasajero**: Datos demográficos de los pasajeros
+   - passenger_key (PK)
+   - passenger_id
+   - gender
+   - age
+   - nationality
+
+4. **dim_fecha**: Dimensión temporal para análisis por tiempo
+   - date_id (PK)
+   - fecha, año, mes, día
+   - trimestre
+   - día de la semana
+   - es_fin_semana
+
+5. **dim_avion**: Tipos de aeronave y clase de cabina
+   - aircraft_id (PK)
+   - aircraft_type
+   - cabin_class
+
+### Relaciones del Modelo
+
+La tabla **fact_vuelo** mantiene relaciones de muchos a uno (N:1) con cada dimensión:
+
+- Un vuelo pertenece a una aerolínea
+- Un vuelo tiene un aeropuerto de origen y uno de destino
+- Un vuelo tiene un pasajero asignado
+- Un vuelo tiene una fecha de salida, llegada y reserva
+- Un vuelo utiliza un tipo de avión y clase de cabina
+
+Este diseño permite responder preguntas analíticas como:
+
+- ¿Cuáles son las aerolíneas con más vuelos?
+- ¿Qué rutas son más frecuentes?
+- ¿Cuál es el perfil demográfico de los pasajeros?
+- ¿Cómo varía la demanda por temporada?
+- ¿Qué clase de cabina genera más ingresos?
 
 ## Instalación y Configuración
 
@@ -81,7 +136,6 @@ pip install -r requirements.txt
 
 ```powershell
 # Ejecutar el script SQL en SQL Server Management Studio
-# o mediante sqlcmd:
 sqlcmd -S localhost -i create_database.sql
 ```
 
@@ -133,7 +187,6 @@ sqlcmd -S localhost -i create_database.sql
 1. Inserción de dimensiones (sin duplicados)
 2. Obtención de claves foráneas
 3. Carga de tabla de hechos con relaciones
-   ✅
 
 El archivo `consultas.sql` incluye 9 secciones completas de análisis:
 
@@ -173,37 +226,35 @@ El archivo `consultas.sql` incluye 9 secciones completas de análisis:
 ### Paso 2: Verificar Configuración (Opcional)
 
 ```powershell
-# AcCaracterísticas del ETL Implementado
+# Características del ETL Implementado
 
 ### Extracción
-- ✅ Lectura robusta del CSV con manejo de encoding UTF-8
-- ✅ Validación de estructura y registros
+- Lectura robusta del CSV con manejo de encoding UTF-8
+- Validación de estructura y registros
 
 ### Transformación
-- ✅ Parseo flexible de fechas (múltiples formatos soportados)
-- ✅ Normalización de códigos de aeropuerto (a mayúsculas)
-- ✅ Normalización de género (M, F, X)
-- ✅ Limpieza de precios (eliminación de comas, conversión a float)
-- ✅ Estandarización de códigos de aerolínea y nombres
-- ✅ Normalización de status, cabin_class, payment_method
-- ✅ Eliminación de duplicados por record_id
-- ✅ Manejo de valores nulos
+- Parseo flexible de fechas (múltiples formatos soportados)
+- Normalización de códigos de aeropuerto (a mayúsculas)
+- Normalización de género (M, F, X)
+- Limpieza de precios (eliminación de comas, conversión a float)
+- Estandarización de códigos de aerolínea y nombres
+- Normalización de status, cabin_class, payment_method
+- Eliminación de duplicados por record_id
+- Manejo de valores nulos
 
 ### Carga
-- ✅ Carga incremental de dimensiones (evita duplicados)
-- ✅ Validación de claves foráneas antes de insertar en fact_vuelo
-- ✅ Inserción por lotes para optimizar rendimiento
-- ✅ Logging detallado del proceso
-- ✅ Manejo de excepciones y errores
-- ✅ Resumen de estadísticas al finalizar
+- Carga incremental de dimensiones (evita duplicados)
+- Validación de claves foráneas antes de insertar en fact_vuelo
+- Inserción por lotes para optimizar rendimiento
+- Logging detallado del proceso
+- Manejo de excepciones y errores
+- Resumen de estadísticas al finalizar
 
 ### Características Adicionales
-- ✅ Sistema de logging completo (archivo + consola)
-- ✅ Contador de progreso durante la carga
-- ✅ Reporte de tiempo de ejecución
-- ✅ Limpieza automática de fact_vuelo en re-ejecuciones
-# Ejecutar pruebas
-python test_setup.py
+- Sistema de logging completo (archivo + consola)
+- Contador de progreso durante la carga
+- Reporte de tiempo de ejecución
+- Limpieza automática de fact_vuelo
 ```
 
 ### Paso 3: Ejecutar ETL
@@ -215,24 +266,17 @@ python test_setup.py
 # Ejecutar el script ETL
 python etl-vuelos.py
 
-# Tiempo estimado: 5-15 minutos
 # Se generará un archivo etl_vuelos.log con el detalle del proceso
 ```
 
 ### Paso 4: Ejecutar Consultas Analíticas
 
 ```powershell
-# Desde SSMS: Abrir y ejecutar consultas.sql
-# O desde PowerShell:
-sqlcmd -S localhost -d DW_Vuelos -i consultas.sql -o resultados.txt
+ desde PowerShell:
+sqlcmd -S localhost\SQLEXPRESS -d DW_Vuelos -C -i consultas.sql -o resultados_consultas.txt
 ```
 
-### 📖 Documentación Detallada
-
-- **[GUIA_EJECUCION.md](GUIA_EJECUCION.md)**: Guía completa paso a paso de ejecución
-- **[INSTRUCCIONES_SETUP.md](INSTRUCCIONES_SETUP.md)**: Instrucciones de configuración inicial Sección 6: Análisis de Clase de Cabina
-- Distribución por clase (ECONOMY, BUSINESS, PREMIUM_ECONOMY, FIRST)
-- Top 10 tipos de aeronave más utilizados
+### Documentación Detallada
 
 ### Sección 7: Análisis Temporal
 
