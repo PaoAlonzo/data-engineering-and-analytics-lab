@@ -1,21 +1,20 @@
 import os
 from datetime import datetime, timezone
-
 from pyspark.sql import SparkSession
 
 
 CARNET = "201902246"  
-BUCKET_NAME = "ht3-carnet-201902246"
+BUCKET_NAME = "ht3-carnet-40094c05"
 SPARK_CONNECT_URL = "sc://136.114.236.151:15002"
 GCS_PREFIX = "carnets"
 
 
 def main() -> None:
-    carnet_value = os.getenv("HT3_201902246", CARNET)
+    carnet_value = os.getenv("HT3_CARNET", CARNET)
 
     spark = (
         SparkSession.builder.remote(SPARK_CONNECT_URL)
-        .appName("HT3-201902246-Parquet-GCS")
+        .appName("HT3-Carnet-Parquet-GCS")
         .config("spark.hadoop.fs.gs.impl", "com.google.cloud.hadoop.fs.gcs.GoogleHadoopFileSystem")
         .config("spark.hadoop.fs.AbstractFileSystem.gs.impl", "com.google.cloud.hadoop.fs.gcs.GoogleHadoopFS")
         .getOrCreate()
