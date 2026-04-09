@@ -1,0 +1,151 @@
+Fecha|CodCliente|NomCliente|Segmento|Canal|Departamento|Municipio|SKU|Cantidad|PrecioUnitario|Descuento
+2026-03-31|C-1001|Super Mercado Central|Supermercado|Mayorista|Guatemala|Guatemala|LAC-001|2|8.15|0.75
+2026-03-30|C-1002|Tienda La Esquina|Tienda|Minorista|Guatemala|Mixco|LAC-002|3|4.95|1.50
+2026-03-29|C-1003|Hotel Mirador|HORECA|Institucional|Sacatepequez|Antigua Guatemala|BEB-001|4|6.50|2.25
+2026-03-28|C-1004|Restaurante El Buen Sabor|HORECA|Institucional|Guatemala|Villa Nueva|BEB-002|5|2.80|3.00
+2026-03-27|C-1005|Market Online GT|Online|Ecommerce|Guatemala|Guatemala|SNK-001|6|3.95|3.75
+2026-03-26|C-1006|MiniMarket Los Pinos|Tienda|Minorista|Quetzaltenango|Quetzaltenango|SNK-002|7|4.95|4.50
+2026-03-25|C-1007|Distribuidora Norte|Mayorista|Mayorista|Alta Verapaz|Coban|ABA-001|8|22.50|5.25
+2026-03-24|C-1008|Super Ahorro Xela|Supermercado|Mayorista|Quetzaltenango|Quetzaltenango|ABA-002|9|11.90|6.00
+2026-03-23|C-1009|Comedor Universitario|Institucional|Institucional|Guatemala|Guatemala|ABA-003|10|15.90|0.00
+2026-03-22|C-1010|Bodega Sur|Mayorista|Mayorista|Escuintla|Escuintla|CON-001|11|7.80|0.75
+2026-03-21|C-1001|Super Mercado Central|Supermercado|Mayorista|Guatemala|Guatemala|CON-002|12|6.25|1.50
+2026-03-20|C-1002|Tienda La Esquina|Tienda|Minorista|Guatemala|Mixco|BEB-003|13|7.20|2.25
+2026-03-19|C-1003|Hotel Mirador|HORECA|Institucional|Sacatepequez|Antigua Guatemala|LAC-001|14|8.15|3.00
+2026-03-18|C-1004|Restaurante El Buen Sabor|HORECA|Institucional|Guatemala|Villa Nueva|LAC-002|15|4.95|3.75
+2026-03-17|C-1005|Market Online GT|Online|Ecommerce|Guatemala|Guatemala|BEB-001|16|6.50|4.50
+2026-03-16|C-1006|MiniMarket Los Pinos|Tienda|Minorista|Quetzaltenango|Quetzaltenango|BEB-002|17|2.80|5.25
+2026-03-15|C-1007|Distribuidora Norte|Mayorista|Mayorista|Alta Verapaz|Coban|SNK-001|18|3.95|6.00
+2026-03-14|C-1008|Super Ahorro Xela|Supermercado|Mayorista|Quetzaltenango|Quetzaltenango|SNK-002|19|4.95|0.00
+2026-03-13|C-1009|Comedor Universitario|Institucional|Institucional|Guatemala|Guatemala|ABA-001|20|22.50|0.75
+2026-03-12|C-1010|Bodega Sur|Mayorista|Mayorista|Escuintla|Escuintla|ABA-002|21|11.90|1.50
+2026-03-11|C-1001|Super Mercado Central|Supermercado|Mayorista|Guatemala|Guatemala|ABA-003|22|15.90|2.25
+2026-03-10|C-1002|Tienda La Esquina|Tienda|Minorista|Guatemala|Mixco|CON-001|23|7.80|3.00
+2026-03-09|C-1003|Hotel Mirador|HORECA|Institucional|Sacatepequez|Antigua Guatemala|CON-002|24|6.25|3.75
+2026-03-08|C-1004|Restaurante El Buen Sabor|HORECA|Institucional|Guatemala|Villa Nueva|BEB-003|1|7.20|4.50
+2026-03-07|C-1005|Market Online GT|Online|Ecommerce|Guatemala|Guatemala|LAC-001|2|8.15|5.25
+2026-03-06|C-1006|MiniMarket Los Pinos|Tienda|Minorista|Quetzaltenango|Quetzaltenango|LAC-002|3|4.95|6.00
+2026-03-05|C-1007|Distribuidora Norte|Mayorista|Mayorista|Alta Verapaz|Coban|BEB-001|4|6.50|0.00
+2026-03-04|C-1008|Super Ahorro Xela|Supermercado|Mayorista|Quetzaltenango|Quetzaltenango|BEB-002|5|2.80|0.75
+2026-03-03|C-1009|Comedor Universitario|Institucional|Institucional|Guatemala|Guatemala|SNK-001|6|3.95|1.50
+2026-03-02|C-1010|Bodega Sur|Mayorista|Mayorista|Escuintla|Escuintla|SNK-002|7|4.95|2.25
+2026-03-01|C-1001|Super Mercado Central|Supermercado|Mayorista|Guatemala|Guatemala|ABA-001|8|22.50|3.00
+2026-02-28|C-1002|Tienda La Esquina|Tienda|Minorista|Guatemala|Mixco|ABA-002|9|11.90|3.75
+2026-02-27|C-1003|Hotel Mirador|HORECA|Institucional|Sacatepequez|Antigua Guatemala|ABA-003|10|15.90|4.50
+2026-02-26|C-1004|Restaurante El Buen Sabor|HORECA|Institucional|Guatemala|Villa Nueva|CON-001|11|7.80|5.25
+2026-02-25|C-1005|Market Online GT|Online|Ecommerce|Guatemala|Guatemala|CON-002|12|6.25|6.00
+2026-02-24|C-1006|MiniMarket Los Pinos|Tienda|Minorista|Quetzaltenango|Quetzaltenango|BEB-003|13|7.20|0.00
+2026-02-23|C-1007|Distribuidora Norte|Mayorista|Mayorista|Alta Verapaz|Coban|LAC-001|14|8.15|0.75
+2026-02-22|C-1008|Super Ahorro Xela|Supermercado|Mayorista|Quetzaltenango|Quetzaltenango|LAC-002|15|4.95|1.50
+2026-02-21|C-1009|Comedor Universitario|Institucional|Institucional|Guatemala|Guatemala|BEB-001|16|6.50|2.25
+2026-02-20|C-1010|Bodega Sur|Mayorista|Mayorista|Escuintla|Escuintla|BEB-002|17|2.80|3.00
+2026-02-19|C-1001|Super Mercado Central|Supermercado|Mayorista|Guatemala|Guatemala|SNK-001|18|3.95|3.75
+2026-02-18|C-1002|Tienda La Esquina|Tienda|Minorista|Guatemala|Mixco|SNK-002|19|4.95|4.50
+2026-02-17|C-1003|Hotel Mirador|HORECA|Institucional|Sacatepequez|Antigua Guatemala|ABA-001|20|22.50|5.25
+2026-02-16|C-1004|Restaurante El Buen Sabor|HORECA|Institucional|Guatemala|Villa Nueva|ABA-002|21|11.90|6.00
+2026-02-15|C-1005|Market Online GT|Online|Ecommerce|Guatemala|Guatemala|ABA-003|22|15.90|0.00
+2026-02-14|C-1006|MiniMarket Los Pinos|Tienda|Minorista|Quetzaltenango|Quetzaltenango|CON-001|23|7.80|0.75
+2026-02-13|C-1007|Distribuidora Norte|Mayorista|Mayorista|Alta Verapaz|Coban|CON-002|24|6.25|1.50
+2026-02-12|C-1008|Super Ahorro Xela|Supermercado|Mayorista|Quetzaltenango|Quetzaltenango|BEB-003|1|7.20|2.25
+2026-02-11|C-1009|Comedor Universitario|Institucional|Institucional|Guatemala|Guatemala|LAC-001|2|8.15|3.00
+2026-02-10|C-1010|Bodega Sur|Mayorista|Mayorista|Escuintla|Escuintla|LAC-002|3|4.95|3.75
+2026-02-09|C-1001|Super Mercado Central|Supermercado|Mayorista|Guatemala|Guatemala|BEB-001|4|6.50|4.50
+2026-02-08|C-1002|Tienda La Esquina|Tienda|Minorista|Guatemala|Mixco|BEB-002|5|2.80|5.25
+2026-02-07|C-1003|Hotel Mirador|HORECA|Institucional|Sacatepequez|Antigua Guatemala|SNK-001|6|3.95|6.00
+2026-02-06|C-1004|Restaurante El Buen Sabor|HORECA|Institucional|Guatemala|Villa Nueva|SNK-002|7|4.95|0.00
+2026-02-05|C-1005|Market Online GT|Online|Ecommerce|Guatemala|Guatemala|ABA-001|8|22.50|0.75
+2026-02-04|C-1006|MiniMarket Los Pinos|Tienda|Minorista|Quetzaltenango|Quetzaltenango|ABA-002|9|11.90|1.50
+2026-02-03|C-1007|Distribuidora Norte|Mayorista|Mayorista|Alta Verapaz|Coban|ABA-003|10|15.90|2.25
+2026-02-02|C-1008|Super Ahorro Xela|Supermercado|Mayorista|Quetzaltenango|Quetzaltenango|CON-001|11|7.80|3.00
+2026-02-01|C-1009|Comedor Universitario|Institucional|Institucional|Guatemala|Guatemala|CON-002|12|6.25|3.75
+2026-01-31|C-1010|Bodega Sur|Mayorista|Mayorista|Escuintla|Escuintla|BEB-003|13|7.20|4.50
+2026-01-30|C-1001|Super Mercado Central|Supermercado|Mayorista|Guatemala|Guatemala|LAC-001|14|8.15|5.25
+2026-01-29|C-1002|Tienda La Esquina|Tienda|Minorista|Guatemala|Mixco|LAC-002|15|4.95|6.00
+2026-01-28|C-1003|Hotel Mirador|HORECA|Institucional|Sacatepequez|Antigua Guatemala|BEB-001|16|6.50|0.00
+2026-01-27|C-1004|Restaurante El Buen Sabor|HORECA|Institucional|Guatemala|Villa Nueva|BEB-002|17|2.80|0.75
+2026-01-26|C-1005|Market Online GT|Online|Ecommerce|Guatemala|Guatemala|SNK-001|18|3.95|1.50
+2026-01-25|C-1006|MiniMarket Los Pinos|Tienda|Minorista|Quetzaltenango|Quetzaltenango|SNK-002|19|4.95|2.25
+2026-01-24|C-1007|Distribuidora Norte|Mayorista|Mayorista|Alta Verapaz|Coban|ABA-001|20|22.50|3.00
+2026-01-23|C-1008|Super Ahorro Xela|Supermercado|Mayorista|Quetzaltenango|Quetzaltenango|ABA-002|21|11.90|3.75
+2026-01-22|C-1009|Comedor Universitario|Institucional|Institucional|Guatemala|Guatemala|ABA-003|22|15.90|4.50
+2026-01-21|C-1010|Bodega Sur|Mayorista|Mayorista|Escuintla|Escuintla|CON-001|23|7.80|5.25
+2026-01-20|C-1001|Super Mercado Central|Supermercado|Mayorista|Guatemala|Guatemala|CON-002|24|6.25|6.00
+2026-01-19|C-1002|Tienda La Esquina|Tienda|Minorista|Guatemala|Mixco|BEB-003|1|7.20|0.00
+2026-01-18|C-1003|Hotel Mirador|HORECA|Institucional|Sacatepequez|Antigua Guatemala|LAC-001|2|8.15|0.75
+2026-01-17|C-1004|Restaurante El Buen Sabor|HORECA|Institucional|Guatemala|Villa Nueva|LAC-002|3|4.95|1.50
+2026-01-16|C-1005|Market Online GT|Online|Ecommerce|Guatemala|Guatemala|BEB-001|4|6.50|2.25
+2026-01-15|C-1006|MiniMarket Los Pinos|Tienda|Minorista|Quetzaltenango|Quetzaltenango|BEB-002|5|2.80|3.00
+2026-01-14|C-1007|Distribuidora Norte|Mayorista|Mayorista|Alta Verapaz|Coban|SNK-001|6|3.95|3.75
+2026-01-13|C-1008|Super Ahorro Xela|Supermercado|Mayorista|Quetzaltenango|Quetzaltenango|SNK-002|7|4.95|4.50
+2026-01-12|C-1009|Comedor Universitario|Institucional|Institucional|Guatemala|Guatemala|ABA-001|8|22.50|5.25
+2026-01-11|C-1010|Bodega Sur|Mayorista|Mayorista|Escuintla|Escuintla|ABA-002|9|11.90|6.00
+2026-01-10|C-1001|Super Mercado Central|Supermercado|Mayorista|Guatemala|Guatemala|ABA-003|10|15.90|0.00
+2026-01-09|C-1002|Tienda La Esquina|Tienda|Minorista|Guatemala|Mixco|CON-001|11|7.80|0.75
+2026-01-08|C-1003|Hotel Mirador|HORECA|Institucional|Sacatepequez|Antigua Guatemala|CON-002|12|6.25|1.50
+2026-01-07|C-1004|Restaurante El Buen Sabor|HORECA|Institucional|Guatemala|Villa Nueva|BEB-003|13|7.20|2.25
+2026-01-06|C-1005|Market Online GT|Online|Ecommerce|Guatemala|Guatemala|LAC-001|14|8.15|3.00
+2026-01-05|C-1006|MiniMarket Los Pinos|Tienda|Minorista|Quetzaltenango|Quetzaltenango|LAC-002|15|4.95|3.75
+2026-01-04|C-1007|Distribuidora Norte|Mayorista|Mayorista|Alta Verapaz|Coban|BEB-001|16|6.50|4.50
+2026-01-03|C-1008|Super Ahorro Xela|Supermercado|Mayorista|Quetzaltenango|Quetzaltenango|BEB-002|17|2.80|5.25
+2026-01-02|C-1009|Comedor Universitario|Institucional|Institucional|Guatemala|Guatemala|SNK-001|18|3.95|6.00
+2026-01-01|C-1010|Bodega Sur|Mayorista|Mayorista|Escuintla|Escuintla|SNK-002|19|4.95|0.00
+2025-12-31|C-1001|Super Mercado Central|Supermercado|Mayorista|Guatemala|Guatemala|ABA-001|20|22.50|0.75
+2025-12-30|C-1002|Tienda La Esquina|Tienda|Minorista|Guatemala|Mixco|ABA-002|21|11.90|1.50
+2025-12-29|C-1003|Hotel Mirador|HORECA|Institucional|Sacatepequez|Antigua Guatemala|ABA-003|22|15.90|2.25
+2025-12-28|C-1004|Restaurante El Buen Sabor|HORECA|Institucional|Guatemala|Villa Nueva|CON-001|23|7.80|3.00
+2025-12-27|C-1005|Market Online GT|Online|Ecommerce|Guatemala|Guatemala|CON-002|24|6.25|3.75
+2025-12-26|C-1006|MiniMarket Los Pinos|Tienda|Minorista|Quetzaltenango|Quetzaltenango|BEB-003|1|7.20|4.50
+2025-12-25|C-1007|Distribuidora Norte|Mayorista|Mayorista|Alta Verapaz|Coban|LAC-001|2|8.15|5.25
+2025-12-24|C-1008|Super Ahorro Xela|Supermercado|Mayorista|Quetzaltenango|Quetzaltenango|LAC-002|3|4.95|6.00
+2025-12-23|C-1009|Comedor Universitario|Institucional|Institucional|Guatemala|Guatemala|BEB-001|4|6.50|0.00
+2025-12-22|C-1010|Bodega Sur|Mayorista|Mayorista|Escuintla|Escuintla|BEB-002|5|2.80|0.75
+2025-12-21|C-1001|Super Mercado Central|Supermercado|Mayorista|Guatemala|Guatemala|SNK-001|6|3.95|1.50
+2025-12-20|C-1002|Tienda La Esquina|Tienda|Minorista|Guatemala|Mixco|SNK-002|7|4.95|2.25
+2025-12-19|C-1003|Hotel Mirador|HORECA|Institucional|Sacatepequez|Antigua Guatemala|ABA-001|8|22.50|3.00
+2025-12-18|C-1004|Restaurante El Buen Sabor|HORECA|Institucional|Guatemala|Villa Nueva|ABA-002|9|11.90|3.75
+2025-12-17|C-1005|Market Online GT|Online|Ecommerce|Guatemala|Guatemala|ABA-003|10|15.90|4.50
+2025-12-16|C-1006|MiniMarket Los Pinos|Tienda|Minorista|Quetzaltenango|Quetzaltenango|CON-001|11|7.80|5.25
+2025-12-15|C-1007|Distribuidora Norte|Mayorista|Mayorista|Alta Verapaz|Coban|CON-002|12|6.25|6.00
+2025-12-14|C-1008|Super Ahorro Xela|Supermercado|Mayorista|Quetzaltenango|Quetzaltenango|BEB-003|13|7.20|0.00
+2025-12-13|C-1009|Comedor Universitario|Institucional|Institucional|Guatemala|Guatemala|LAC-001|14|8.15|0.75
+2025-12-12|C-1010|Bodega Sur|Mayorista|Mayorista|Escuintla|Escuintla|LAC-002|15|4.95|1.50
+2025-12-11|C-1001|Super Mercado Central|Supermercado|Mayorista|Guatemala|Guatemala|BEB-001|16|6.50|2.25
+2025-12-10|C-1002|Tienda La Esquina|Tienda|Minorista|Guatemala|Mixco|BEB-002|17|2.80|3.00
+2025-12-09|C-1003|Hotel Mirador|HORECA|Institucional|Sacatepequez|Antigua Guatemala|SNK-001|18|3.95|3.75
+2025-12-08|C-1004|Restaurante El Buen Sabor|HORECA|Institucional|Guatemala|Villa Nueva|SNK-002|19|4.95|4.50
+2025-12-07|C-1005|Market Online GT|Online|Ecommerce|Guatemala|Guatemala|ABA-001|20|22.50|5.25
+2025-12-06|C-1006|MiniMarket Los Pinos|Tienda|Minorista|Quetzaltenango|Quetzaltenango|ABA-002|21|11.90|6.00
+2025-12-05|C-1007|Distribuidora Norte|Mayorista|Mayorista|Alta Verapaz|Coban|ABA-003|22|15.90|0.00
+2025-12-04|C-1008|Super Ahorro Xela|Supermercado|Mayorista|Quetzaltenango|Quetzaltenango|CON-001|23|7.80|0.75
+2025-12-03|C-1009|Comedor Universitario|Institucional|Institucional|Guatemala|Guatemala|CON-002|24|6.25|1.50
+2026-04-01|C-1010|Bodega Sur|Mayorista|Mayorista|Escuintla|Escuintla|BEB-003|1|7.20|2.25
+2026-03-31|C-1001|Super Mercado Central|Supermercado|Mayorista|Guatemala|Guatemala|LAC-001|2|8.15|3.00
+2026-03-30|C-1002|Tienda La Esquina|Tienda|Minorista|Guatemala|Mixco|LAC-002|3|4.95|3.75
+2026-03-29|C-1003|Hotel Mirador|HORECA|Institucional|Sacatepequez|Antigua Guatemala|BEB-001|4|6.50|4.50
+2026-03-28|C-1004|Restaurante El Buen Sabor|HORECA|Institucional|Guatemala|Villa Nueva|BEB-002|5|2.80|5.25
+2026-03-27|C-1005|Market Online GT|Online|Ecommerce|Guatemala|Guatemala|SNK-001|6|3.95|6.00
+2026-03-26|C-1006|MiniMarket Los Pinos|Tienda|Minorista|Quetzaltenango|Quetzaltenango|SNK-002|7|4.95|0.00
+2026-03-25|C-1007|Distribuidora Norte|Mayorista|Mayorista|Alta Verapaz|Coban|ABA-001|8|22.50|0.75
+2026-03-24|C-1008|Super Ahorro Xela|Supermercado|Mayorista|Quetzaltenango|Quetzaltenango|ABA-002|9|11.90|1.50
+2026-03-23|C-1009|Comedor Universitario|Institucional|Institucional|Guatemala|Guatemala|ABA-003|10|15.90|2.25
+2026-03-22|C-1010|Bodega Sur|Mayorista|Mayorista|Escuintla|Escuintla|CON-001|11|7.80|3.00
+2026-03-21|C-1001|Super Mercado Central|Supermercado|Mayorista|Guatemala|Guatemala|CON-002|12|6.25|3.75
+2026-03-20|C-1002|Tienda La Esquina|Tienda|Minorista|Guatemala|Mixco|BEB-003|13|7.20|4.50
+2026-03-19|C-1003|Hotel Mirador|HORECA|Institucional|Sacatepequez|Antigua Guatemala|LAC-001|14|8.15|5.25
+2026-03-18|C-1004|Restaurante El Buen Sabor|HORECA|Institucional|Guatemala|Villa Nueva|LAC-002|15|4.95|6.00
+2026-03-17|C-1005|Market Online GT|Online|Ecommerce|Guatemala|Guatemala|BEB-001|16|6.50|0.00
+2026-03-16|C-1006|MiniMarket Los Pinos|Tienda|Minorista|Quetzaltenango|Quetzaltenango|BEB-002|17|2.80|0.75
+2026-03-15|C-1007|Distribuidora Norte|Mayorista|Mayorista|Alta Verapaz|Coban|SNK-001|18|3.95|1.50
+2026-03-14|C-1008|Super Ahorro Xela|Supermercado|Mayorista|Quetzaltenango|Quetzaltenango|SNK-002|19|4.95|2.25
+2026-03-13|C-1009|Comedor Universitario|Institucional|Institucional|Guatemala|Guatemala|ABA-001|20|22.50|3.00
+2026-03-12|C-1010|Bodega Sur|Mayorista|Mayorista|Escuintla|Escuintla|ABA-002|21|11.90|3.75
+2026-03-11|C-1001|Super Mercado Central|Supermercado|Mayorista|Guatemala|Guatemala|ABA-003|22|15.90|4.50
+2026-03-10|C-1002|Tienda La Esquina|Tienda|Minorista|Guatemala|Mixco|CON-001|23|7.80|5.25
+2026-03-09|C-1003|Hotel Mirador|HORECA|Institucional|Sacatepequez|Antigua Guatemala|CON-002|24|6.25|6.00
+2026-03-08|C-1004|Restaurante El Buen Sabor|HORECA|Institucional|Guatemala|Villa Nueva|BEB-003|1|7.20|0.00
+2026-03-07|C-1005|Market Online GT|Online|Ecommerce|Guatemala|Guatemala|LAC-001|2|8.15|0.75
+2026-03-06|C-1006|MiniMarket Los Pinos|Tienda|Minorista|Quetzaltenango|Quetzaltenango|LAC-002|3|4.95|1.50
+2026-03-05|C-1007|Distribuidora Norte|Mayorista|Mayorista|Alta Verapaz|Coban|BEB-001|4|6.50|2.25
+2026-03-04|C-1008|Super Ahorro Xela|Supermercado|Mayorista|Quetzaltenango|Quetzaltenango|BEB-002|5|2.80|3.00
+2026-03-03|C-1009|Comedor Universitario|Institucional|Institucional|Guatemala|Guatemala|SNK-001|6|3.95|3.75
+2026-03-02|C-1010|Bodega Sur|Mayorista|Mayorista|Escuintla|Escuintla|SNK-002|7|4.95|4.50
