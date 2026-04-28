@@ -212,9 +212,9 @@ BEGIN
         fu.FuenteKey,
         s.CantidadVendida,
         s.PrecioUnitario,
-        s.Descuento,
+        ISNULL(s.Descuento, 0),
         ISNULL(s.ImporteNeto,
-               (s.CantidadVendida * s.PrecioUnitario) - s.Descuento),
+               (s.CantidadVendida * s.PrecioUnitario) - ISNULL(s.Descuento, 0)),
         p.CostoUnitario
     FROM STG_SGFood.dbo.STG_VentasOLTP s
     INNER JOIN dbo.DimFecha    f  ON f.FechaKey     = CONVERT(INT, FORMAT(s.FechaTransaccion, 'yyyyMMdd'))
@@ -286,28 +286,4 @@ BEGIN
 
     PRINT 'FactInventario cargada: ' + CAST(@@ROWCOUNT AS VARCHAR) + ' registros.';
 END;
-GO
-
--- ============================================================
--- Procedimiento maestro: ejecutar toda la carga en orden correcto
--- ============================================================
-CREATE OR ALTER PROCEDURE dbo.SP_Ejecutar_Carga_Completa
-AS
-BEGIN
-    SET NOCOUNT ON;
-    PRINT '=== Inicio carga Data Warehouse DW_SGFood ===';
-    PRINT CAST(GETDATE() AS VARCHAR);
-
-    EXEC dbo.SP_Cargar_DimFuente;
-    EXEC dbo.SP_Cargar_DimProducto;
-    EXEC dbo.SP_Cargar_DimCliente;
-    EXEC dbo.SP_Cargar_FactVentas;
-    EXEC dbo.SP_Cargar_FactInventario;
-
-    PRINT '=== Carga completada ===';
-    PRINT CAST(GETDATE() AS VARCHAR);
-END;
-GO
-
-PRINT 'Stored Procedures de carga DW creados correctamente.';
 GO
