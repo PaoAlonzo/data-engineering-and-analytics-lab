@@ -97,7 +97,10 @@ Por que se eligio esta configuración:
 - En BigQuery, la pantalla de "Detalles de la ejecucion" confirma que la tabla optimizada es reconocida como tabla particionada.
 
 ### Comparacion de rendimiento
-
+#### Consulta con tabla sin optimizar
+![alt text](img/Pimage.png)
+#### Consulta con tabla optimizada
+![alt text](img/Pimage-1.png)
 Para comparar el rendimiento se ejecuto la misma consulta filtrando por mes y zona sobre ambas tablas y se observo la diferencia en bytes procesados:
 
 | Consulta              | Tabla usada            | Observacion                                          |
@@ -327,6 +330,60 @@ El tablero incluye:
 - Distribucion por tipo de pago
 - Comparacion de predicciones vs valores reales de los modelos
 
+### 1. Viajes por Mes - NYC Taxi 2022
 
+Esta gráfica de barras muestra la cantidad total de viajes realizados en cada mes del año 2022.
 
+Se observa una tendencia creciente desde inicios de año, lo que sugiere una recuperación progresiva en la demanda del servicio de taxis. Los últimos meses presentan los valores más altos, lo cual puede estar relacionado con mayor actividad económica, turismo o estacionalidad (festividades y fin de año).
 
+Este comportamiento permite identificar patrones de demanda a nivel macro y es útil para planificación operativa.
+![alt text](img/image.png)
+
+### 2. Total de Viajes a lo largo del tiempo
+
+Esta gráfica de línea representa la evolución diaria del número de viajes durante todo el año.
+
+Se identifican patrones cíclicos claros, donde hay variaciones frecuentes que corresponden a días de la semana (mayor demanda en días laborales o fines de semana). También se observan caídas abruptas en ciertos puntos, que pueden corresponder a eventos atípicos, problemas en el registro de datos o días con baja actividad.
+
+Este tipo de visualización permite analizar tendencias temporales y detectar anomalías en los datos.
+![alt text](img/image-1.png)
+
+### 3. Tarifa Promedio por Hora del Día
+
+Esta gráfica muestra cómo varía la tarifa promedio dependiendo de la hora del día.
+
+Se observa que durante la madrugada y primeras horas del día las tarifas son más bajas, mientras que aumentan progresivamente hacia la noche, alcanzando su punto máximo en horas nocturnas. Esto puede explicarse por menor disponibilidad de taxis, mayor demanda o recargos nocturnos.
+
+Este análisis permite entender el comportamiento dinámico de precios y cómo la hora influye directamente en el costo del servicio.
+![alt text](img/image-2.png)
+
+### 4. Distribución de Viajes por Tipo de Pago
+
+Esta gráfica de pastel muestra la proporción de viajes según el método de pago.
+
+Se observa que aproximadamente el 80% de los viajes se realizan con tarjeta, mientras que alrededor del 20% se pagan en efectivo. Esto indica una fuerte preferencia por pagos electrónicos, lo cual también influye en el registro de propinas (ya que es más fácil incluirlas con tarjeta).
+
+Este hallazgo es clave para el modelo de clasificación de propinas, ya que el tipo de pago resulta ser una de las variables más predictivas.
+![alt text](img/image-4.png)
+
+### 5. Tarifa Real vs Tarifa Predicha
+
+Esta gráfica de dispersión compara los valores reales de la tarifa con los valores predichos por el modelo de regresión lineal.
+
+Idealmente, los puntos deberían alinearse sobre una línea diagonal (predicción perfecta). En la gráfica se observa que, aunque existe cierta dispersión, la mayoría de los puntos siguen una tendencia lineal, lo que indica que el modelo tiene un buen ajuste.
+
+Las desviaciones representan errores de predicción, pero en general el modelo logra aproximar correctamente las tarifas, lo cual coincide con el alto valor de R² ≈ 0.95 obtenido en la evaluación.
+
+![alt text](img/image-3.png)
+
+### 6. Predicciones de Propina - Modelo de Clasificación
+
+Esta gráfica muestra la cantidad de registros clasificados como:
+
+1 = sí dio propina
+0 = no dio propina
+
+Se observa una clara mayoría de casos donde sí se da propina, lo cual coincide con la distribución del dataset. El modelo logra identificar correctamente esta tendencia, mostrando un alto desempeño en métricas como recall y accuracy.
+
+Este resultado confirma que el modelo es altamente efectivo para predecir el comportamiento de los usuarios respecto a las propinas.
+![alt text](img/image-5.png)
