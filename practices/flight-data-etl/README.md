@@ -1,10 +1,6 @@
 # Práctica 1: ETL con Python - Análisis de Vuelos
 
-**Curso:** Seminario de Sistemas 2
-
 **Nombre:** Claudia Paola Alonzo Hernández
-
-**Carnet:** 201902246
 
 ## Descripción
 
