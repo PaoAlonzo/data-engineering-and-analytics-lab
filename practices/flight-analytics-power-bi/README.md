@@ -1,4 +1,4 @@
-# Práctica 2
+
 
 # Diseño de Dashboard y KPIs con Power BI
 
