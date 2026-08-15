@@ -1,4 +1,4 @@
-# Práctica 1: ETL con Python - Análisis de Vuelos
+# ETL con Python  Análisis de Vuelos
 
 **Nombre:** Claudia Paola Alonzo Hernández
 
@@ -22,7 +22,7 @@ Implementación de un proceso ETL (Extracción, Transformación y Carga) complet
 ## Estructura del Proyecto
 
 ```
-Practica1/
+flight-data-etl/
 ├── imagenes/
 │   └── modelo.png                 # Diagrama del modelo de datos
 ├── dataset_vuelos_crudo.csv      # Dataset original
@@ -311,10 +311,115 @@ sqlcmd -S localhost\SQLEXPRESS -d DW_Vuelos -C -i consultas.sql -o resultados_co
 # Ejecutar el script ETL
 python etl_vuelos.py
 ```
-
 ## Resultados Esperados
 
-(Se actualizará con los resultados del análisis)
+Al finalizar la ejecución del proceso ETL se espera obtener un conjunto de datos limpio, estandarizado y estructurado en un modelo dimensional para facilitar el análisis de vuelos.
+
+### 1. Resultado del proceso ETL
+
+El proceso debe completar exitosamente las tres etapas del pipeline:
+
+- **Extracción:** lectura y validación del dataset original en formato CSV.
+- **Transformación:** limpieza, normalización y estandarización de los datos.
+- **Carga:** inserción de los datos procesados en SQL Server, respetando las relaciones entre dimensiones y tabla de hechos.
+
+El proceso genera un archivo de log (`etl_vuelos.log`) que permite verificar el estado de la ejecución, errores encontrados, registros procesados y tiempo de ejecución.
+
+### 2. Dataset transformado
+
+Se espera que los datos presenten las siguientes características después de la transformación:
+
+- Fechas convertidas a un formato estándar.
+- Códigos de aeropuertos normalizados a mayúsculas.
+- Géneros homologados a los valores `M`, `F` y `X`.
+- Nombres y códigos de aerolíneas estandarizados.
+- Precios convertidos a valores numéricos y expresados en USD.
+- Registros duplicados eliminados utilizando `record_id`.
+- Valores nulos tratados según las reglas definidas para cada atributo.
+- Estados de vuelo y clases de cabina normalizados.
+
+### 3. Modelo dimensional cargado
+
+Se espera obtener un esquema estrella compuesto por:
+
+- `fact_vuelo`
+- `dim_aerolinea`
+- `dim_aeropuerto`
+- `dim_pasajero`
+- `dim_fecha`
+- `dim_avion`
+
+La tabla `fact_vuelo` debe mantener correctamente las relaciones con las dimensiones mediante claves foráneas.
+
+### 4. Validación de integridad
+
+Las consultas de validación deben permitir comprobar:
+
+- Cantidad de registros cargados en cada tabla.
+- Ausencia de registros duplicados.
+- Integridad referencial entre la tabla de hechos y las dimensiones.
+- Existencia de claves foráneas válidas.
+- Consistencia de los datos transformados.
+- Correcta carga de los registros desde el proceso ETL.
+
+### 5. Resultados del análisis de vuelos
+
+Las consultas analíticas deben permitir identificar:
+
+- Total de vuelos registrados.
+- Aerolíneas con mayor cantidad de vuelos.
+- Rutas de vuelo más frecuentes.
+- Principales aeropuertos de origen y destino.
+- Distribución de vuelos según su estado.
+- Aerolíneas con mayor cantidad de vuelos retrasados.
+- Cantidad de vuelos cancelados y desviados.
+
+### 6. Resultados del análisis de pasajeros
+
+El modelo permitirá analizar:
+
+- Distribución de pasajeros por género.
+- Distribución por rangos de edad.
+- Principales nacionalidades.
+- Identificación de pasajeros con mayor frecuencia de viaje.
+- Perfil demográfico de los viajeros.
+
+### 7. Resultados del análisis temporal
+
+La dimensión `dim_fecha` permitirá analizar:
+
+- Cantidad de vuelos por año.
+- Cantidad de vuelos por mes.
+- Cantidad de vuelos por día de la semana.
+- Comportamiento de la demanda según períodos de tiempo.
+- Diferencias entre días laborales y fines de semana.
+
+### 8. Resultados del análisis de equipaje y cabina
+
+Se espera obtener información sobre:
+
+- Cantidad total de equipaje transportado.
+- Promedio de equipaje por vuelo.
+- Promedio de equipaje según clase de cabina.
+- Distribución de pasajeros entre las diferentes clases de cabina.
+
+### 9. Indicadores de negocio
+
+Las consultas analíticas permitirán obtener indicadores como:
+
+| Indicador | Descripción |
+|---|---|
+| Total de vuelos | Cantidad total de vuelos registrados |
+| Aerolíneas líderes | Aerolíneas con mayor cantidad de vuelos |
+| Rutas más frecuentes | Principales combinaciones origen-destino |
+| Puntualidad | Distribución de vuelos según estado |
+| Demora promedio | Tiempo promedio de retraso |
+| Cancelaciones | Cantidad de vuelos cancelados por aerolínea |
+| Rutas rentables | Rutas con mayores ingresos |
+| Viajero frecuente | Pasajeros con mayor cantidad de vuelos |
+| Ingresos por cabina | Comparación de ingresos según clase |
+| Demanda temporal | Evolución de vuelos según período |
+
 
 ## Referencias
 
