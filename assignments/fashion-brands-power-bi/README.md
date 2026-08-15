@@ -1,4 +1,4 @@
-# Tarea 2 - Análisis de Marcas de Moda con Power BI
+# Análisis de Marcas de Moda con Power BI
 
 ## Descripción del Dataset
 
